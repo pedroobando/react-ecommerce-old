@@ -1,0 +1,42 @@
+.ui.fluid.container.topmenu {
+  max-width: 1300px !important;
+  margin: auto !important;
+  padding: 0 !important;
+  width: 100%;
+}
+
+.ui.text.menu {
+  margin: 0 !important;
+  padding: 20px !important;
+  font-size: 1.1em !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+@media only screen and (max-width: 800px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #333;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    color: #fff;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
