@@ -122,7 +122,7 @@ h4.ui.header {
 }
 
 .products .ui.column.grid .column:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) !important;
 }
 
 /* --- Offers --- */
@@ -184,13 +184,12 @@ small {
 
 .testimonial .ui.grid .column img {
   width: 80px;
-  /* margin-top: 20px; */
   display: inline;
   margin: 20px 0;
 }
 
 .testimonial .ui.grid .column:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) !important;
 }
 
 .testimonial .ui.grid .column .quote.icon {
@@ -228,11 +227,11 @@ small {
   width: 100%;
   cursor: pointer;
   filter: grayscale(100%);
-  transition: transform 1.5s;
+  transition: transform 1.5s !important;
 }
 
 .brands .ui.grid .column img:hover {
-  filter: grayscale(10%);
+  filter: grayscale(10%) !important;
   /* transform: translateY(-5px); */
 }
 
@@ -310,4 +309,44 @@ small {
 
 .app-logo img {
   width: 140px;
+}
+
+@media only screen and (max-width: 600px) {
+  .ui.column.grid {
+    text-align: center !important;
+  }
+
+  .column {
+    flex-basis: 100% !important;
+  }
+
+  .brands .column {
+    flex-basis: 70% !important;
+    margin: auto;
+  }
+
+  .column .rating {
+    display: none !important;
+  }
+
+  .offers .ui.image {
+    padding: 10px;
+  }
+
+  .single-product .row {
+    text-align: left;
+  }
+
+  .single-product .col-2 {
+    padding: 20px 0;
+  }
+
+  .single-product h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .cart-info p {
+    display: none;
+  }
 }
