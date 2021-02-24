@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Icon, Menu } from 'semantic-ui-react';
 import { createMedia } from '@artsy/fresnel';
 import './navbar.css';
@@ -13,7 +13,6 @@ const { MediaContextProvider, Media } = createMedia({
 
 const NavBar = ({ setVisible }) => {
   const nameIconCart = 'shopping bag';
-  // const [visible, setVisible] = useState(false);
 
   const DesktopMenu = () => {
     return (
@@ -27,7 +26,7 @@ const NavBar = ({ setVisible }) => {
         <Menu.Item name="Contact" />
         <Menu.Item name="Account" />
         <Menu.Item>
-          <Icon name={nameIconCart} size="large" />
+          <Icon name="shopping bag" size="large" />
         </Menu.Item>
       </Menu>
     );
