@@ -1,7 +1,10 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import { Sidebar, Menu, Icon } from 'semantic-ui-react';
 import NavBar from '../../features/nav/NavBar';
+import Footer from '../../features/footer/Footer';
 import HomePage from '../../features/pages/home/HomePage';
+import ProductPage from '../../features/pages/product/ProductPage';
 
 const App = () => {
   const [visible, setVisible] = React.useState(false);
@@ -38,8 +41,13 @@ const App = () => {
             Contact
           </Menu.Item>
         </Sidebar>
-        <Sidebar.Pusher as={React.Fragment} dimmed={visible}>
-          <HomePage Navbar={NavBar({ setVisible })} />
+        <Sidebar.Pusher as={React.Fragment}>
+          <NavBar setVisible={setVisible} />
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/product" component={ProductPage} />
+          </Switch>
+          <Footer />
         </Sidebar.Pusher>
       </Sidebar.Pushable>
     </div>

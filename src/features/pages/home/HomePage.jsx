@@ -9,7 +9,7 @@ import TestimonialSection from './TestimonialSection';
 import BrandSection from './BrandSection';
 
 import LatestProductSection from './LatestProductSection';
-import FooterSection from './FooterSection';
+// import FooterSection from './FooterSection';
 
 import './HomePage.css';
 
@@ -23,7 +23,7 @@ const HomePage = ({ Navbar }) => {
       <OfferSection />
       <TestimonialSection />
       <BrandSection />
-      <FooterSection />
+      {/* <FooterSection /> */}
     </>
   );
 };

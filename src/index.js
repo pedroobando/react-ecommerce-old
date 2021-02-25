@@ -5,9 +5,15 @@ import App from './app/layout/App';
 
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 
 // import HomepageLayout from './app/layout/HomepageLayout';
 
 const rootEl = document.getElementById('root');
 
-render(<App />, rootEl);
+render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  rootEl
+);

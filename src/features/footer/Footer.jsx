@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid, Header, Image } from 'semantic-ui-react';
 
-const FooterSection = () => {
+const Footer = () => {
   return (
     <div className="footer">
       <Container fluid>
@@ -47,4 +47,4 @@ const FooterSection = () => {
   );
 };
 
-export default FooterSection;
+export default Footer;

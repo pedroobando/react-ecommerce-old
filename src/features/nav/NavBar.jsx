@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Icon, Menu } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 import { createMedia } from '@artsy/fresnel';
 import './navbar.css';
 
@@ -17,11 +18,11 @@ const NavBar = ({ setVisible }) => {
   const DesktopMenu = () => {
     return (
       <Menu text className="desktopmenu">
-        <Menu.Item header>
+        <Menu.Item exact as={NavLink} to="/" header>
           <img src="/assets/images/logo.png" alt="logo" style={{ width: '125px' }} />
         </Menu.Item>
-        <Menu.Item name="Home" position="right" />
-        <Menu.Item name="Products" />
+        <Menu.Item exact as={NavLink} to="/" name="Home" position="right" />
+        <Menu.Item exact as={NavLink} to="/product" name="Products" />
         <Menu.Item name="About" />
         <Menu.Item name="Contact" />
         <Menu.Item name="Account" />
